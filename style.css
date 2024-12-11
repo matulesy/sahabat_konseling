@@ -1,0 +1,224 @@
+/* Resetting some basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  text-align: center;
+}
+
+/* Header */
+header {
+  background-color: #2C3E50; /* Dark blue for the header */
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #34495E;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: flex-end; /* Navbar items are aligned to the right */
+  width: 100%;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar li {
+  margin-left: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #34495E; /* Darker shade on hover */
+}
+
+/* Hero Section */
+.hero {
+  background-color: #2980B9;
+  padding: 50px 20px;
+  text-align: center;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* Tentang Kami Section */
+#about h2, #about h3 {
+  color: #2C3E50;
+  text-align: center;
+}
+
+#about p {
+  color: #555;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* Layanan Section */
+#services h2 {
+  color: #2980B9;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#services .service-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#services .service-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+#services .service-item h3 {
+  font-size: 1.5rem;
+  margin-top: 15px;
+}
+
+#services .service-item p {
+  color: #555;
+}
+
+#services .service-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Kontak Section */
+#contact h2 {
+  color: #2C3E50;
+  text-align: center;
+}
+
+#contact ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+#contact li {
+  margin-bottom: 10px;
+}
+
+#contact a {
+  color: #2980B9;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background-color: #2C3E50;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 20px;
+}
+
+/* Grid Layout for Services */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  padding: 0 10px;
+  justify-items: center;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  /* Navbar for mobile devices */
+  .navbar ul {
+    display: none; /* Hide navbar items on small screens */
+    flex-direction: column;
+    position: absolute;
+    background-color: #333;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar.active ul {
+    display: flex; /* Display navbar items when active */
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  /* Hero Section Font Size */
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  /* Responsive Grid for Services */
+  .services-grid {
+    grid-template-columns: 1fr; /* Stack grid items into one column on small screens */
+  }
+}
+
+/* Hamburger Menu (only for mobile view) */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+}
